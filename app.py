@@ -1,3 +1,5 @@
+import os
+os.system('pip show pycaret')
 
 import streamlit as st
 import pandas as pd
@@ -9,9 +11,6 @@ from reportlab.pdfgen import canvas
 import tempfile
 import base64
 import os
-
-import base64  # Ensure this is imported
-
 
 warnings.filterwarnings("ignore")  # Suppress warnings that cause the feature_weights error
 
@@ -57,7 +56,7 @@ if st.button("Predict"):
         'heart_disease': heart_disease,
         'ever_married': ever_married,
         'work_type': work_type,
-        'Residence_type': residence_type,
+        'residence_type': residence_type,
         'avg_glucose_level': avg_glucose_level,
         'bmi': bmi,
         'smoking_status': smoking_status
